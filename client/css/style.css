@@ -54,6 +54,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;
 }
 
 .btn {
@@ -63,4 +64,70 @@ body {
   padding: 10px 16px;
   border-radius: 8px;
   cursor: pointer;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.card h3 {
+  font-size: 28px;
+  margin-top: 6px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.column {
+  background: #eceff6;
+  padding: 16px;
+  border-radius: 12px;
+  min-height: 300px;
+}
+
+.column h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.job-card {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  color: #6b7280;
+  font-size: 13px;
+}
+@media (max-width: 900px) {
+  .stats, .board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .stats, .board {
+    grid-template-columns: 1fr;
+  }
 }
